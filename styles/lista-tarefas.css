@@ -1,7 +1,8 @@
 @import url('./common.css');
+
 header {
     display: flex;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    background: linear-gradient(90deg, var(--color3), var(--secondary));
     box-shadow: 0px 3px 5px lightgrey;
     padding: 0 3em;
     margin-bottom: 2em;
@@ -43,7 +44,7 @@ a {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: var(--color3);
     width: 80%;
     margin: 0 10%;
     padding: 1em;
@@ -119,15 +120,15 @@ a {
     position: relative;
     height: 1.5em;
     width: 1.5em;
-    background-color: white;
-    box-shadow: 2px 2px 5px lightgrey;
+    background-color: rgb(221, 228, 253);
+    box-shadow: 2px 2px 8px var(--secondary);
     border: 2px solid var(--secondary);
     z-index: 2;
     transition: background-color 200ms linear;
 }
 
 .tarefa .not-done:hover {
-    background-color: var(--secondary);
+    background-color: var(--color3);
 }
 
 .tarefa:first-child .not-done::before {
@@ -157,9 +158,9 @@ a {
     align-items: center;
     justify-content: space-between; */
     flex: 1;
-    background-color: white;
+    background-color: var(--color1);
     padding: 1em 2em;
-    box-shadow: 2px 2px 5px lightgrey;
+    box-shadow: 2px 2px 5px rgb(134, 119, 30);
 }
 
 .tarefa .nome {
@@ -179,10 +180,10 @@ a {
     width: 8em;
     text-align: center;
     padding: .5em 1em;
-    background-color: white;
+    background-color: #cbd0bb;
     border-radius: .2em;
-    box-shadow: 3px 3px 5px lightgrey;
-    color: rgb(170, 170, 170);
+    box-shadow: 3px 3px 5px ;
+    color: #6c6e64;
     font-weight: 400;
     font-size: 1.1em;
     margin-left: calc(15% - 4em);
@@ -208,11 +209,11 @@ a {
 }
 
 .titulo-concluida .tarefa .descripcion {
-    background-color: rgb(228, 228, 228);
+    background-color: #cbd0bb;
 }
 
 .titulo-concluida .tarefa .descripcion .nome {
-    color: grey;
+    color: rgb(92, 91, 91);
     text-decoration: line-through;
 }
 

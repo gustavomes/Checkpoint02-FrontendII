@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
 
+
+
 :root {
-  --primary: #7898FF;
-  --secondary: #8E64C5;
+  --primary: #1ae2df;
+  --secondary: #1640b4;
   --app-grey: #F2F2F2;
+  --color1: #face7b;
+  --color2: #ffdf75;
+  --color3: #059be5;
 }
 
 * {
