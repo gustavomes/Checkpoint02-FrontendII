@@ -163,19 +163,22 @@ header {
 
   /* ul - lista todo */
 
-ul.fazer {
-    width: 95%;
-    float: left;
-    list-style: none;
+ul.todo {
+  width: 95%;
+  float: left;
+  list-style: none;
     
 }
 .container {
-    padding: 1rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
     
 }
-ul.fazer li {
+ul.todo li {
     width: 100%;
     float: left;
+    display: flex;
+    align-items: center;
+    height: 4rem;
     margin-top: 0.5rem;
     font-size: 1rem;
     font-weight: 500;
@@ -186,91 +189,12 @@ ul.fazer li {
     position: relative;
     box-shadow: 0px 0.1rem 0.2rem rgba(44, 62, 80, 0.10);
     word-break: break-word;
+    margin-top: 0.5rem; /* distância entre os li */
 
 }
 /* botões das tarefas */
-ul.fazer li {
-    margin-top: 0.5rem; /* distância entre os li */
-  }
+
   
-  ul.fazer li .buttons {
-    width: 6.25rem;
-    height: 3rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  
-  ul.fazer li .buttons button {
-    width: 3rem;
-    height: 3rem;
-    float: left;
-    background: none;
-    position: relative;
-    border: 0;
-    box-shadow: none;
-    outline: none;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-  
-  ul.fazer li .buttons button:last-of-type:before {
-    content: '';
-    width: 0.1rem;
-    height: 1.8rem;
-    background: #edf0f1;
-    position: absolute;
-    top: 0.6rem;
-    left: 0;
-  }
-  
-  ul.fazer li .buttons button svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -0.8rem 0 0 -0.8rem;
-  }
-  
-  ul.fazer li .buttons button.complete svg {
-    border: 1.5rem solid #25b99a;
-    transition:  0.2s ease;
-  }
-  
-  ul.fazer#completed li .buttons button.complete svg {
-    background: #25b99a;
-    border: 0;
-  }
-  
-  ul.fazer:not(#completed) li .buttons button.complete:hover svg {
-    background: rgba(37, 185, 154, 0.75);
-  }
-  
-  ul.fazer:not(#completed) li .buttons button.complete:hover svg .fill {
-    fill: #fff;
-  }
-  
-  ul.fazer#completed li .buttons button.complete svg .fill {
-    fill: #fff;
-  }
-  
-  ul.fazer li .buttons button svg .fill {
-    transition: fill 0.2s ease;
-  }
-  
-  ul.fazer li .buttons button.remove svg .fill {
-    fill: #c0cecb;
-  }
-  
-  ul.fazer li .buttons button.remove:hover svg .fill {
-    fill: #e85656;
-  }
-  
-  ul.fazer li .buttons button.complete svg .fill {
-    fill: #25b99a;
-  }
 
   .noFill {
     fill: none;
@@ -285,6 +209,124 @@ ul.fazer li {
 #dataFinal {
     padding: 0rem 3rem 0 0;
 }
+
+ul.todo li .buttons {
+  width: 6.25rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+ul.todo li .buttons button {
+  width: 3rem;
+    height: 3rem;
+    float: left;
+    background: none;
+    position: relative;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+ul.todo li .buttons button:last-of-type:before {
+  content: '';
+    width: 0.1rem;
+    height: 1.8rem;
+    background: #edf0f1;
+    position: absolute;
+    top: 0.6rem;
+    left: 0;
+}
+
+ul.todo li .buttons button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -0.3rem 0 0 -0.8rem;
+}
+
+ul.todo li .buttons button.complete svg {
+  
+  border: 0.1rem solid var(--secondary);
+  transition: background 0.2s ease;
+}
+
+ul.todo#completed li .buttons button.complete svg {
+  background: var(--secondary);
+  border: 0px;
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg {
+  background: var(--secondary);
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
+  fill: #fff;
+}
+
+ul.todo#completed li .buttons button.complete svg .fill {
+  fill: #fff;
+}
+
+ul.todo li .buttons button svg .fill {
+  transition: fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg .fill {
+  fill: #c0cecb;
+}
+
+ul.todo li .buttons button.remove:hover svg .fill {
+  fill: #e85656;
+}
+
+ul.todo li .buttons button.complete svg .fill {
+  fill: var(--secondary);
+}
+
+ul.todo#completed {
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+ul.todo#completed:before {
+  content: '';
+  width: 3.75rem;
+  height: 0.1rem;
+  background: #d8e5e0;
+
+  position: absolute;
+  top: 1.8rem;
+  left: 50%;
+
+  margin: 0 0 0 -0.5rem;
+}
+
+ul.todo#todo:empty:after {
+  content: 'You have nothing to-do!';
+  margin: 1rem 0 0 0;
+}
+
+ul.todo#completed:empty:after {
+  content: 'You have yet to complete any tasks.';
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
 
     
 

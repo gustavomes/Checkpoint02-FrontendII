@@ -22,13 +22,19 @@ document.getElementById("adicionarTarefa").addEventListener("click", function() 
     
     console.log(valorData);
 
-    if (valoInput) addItemTodo(valoInput, valorData) ;  
+    if (valoInput) {
+        addItemTodo(valoInput, valorData);
+
+        // resetar o input com = " ";
+        document.getElementById("tarefas").value = "";
+        document.getElementById("dataFinal").value = "";
+    }  
 });
 
 
 // criar o item da lista
 function addItemTodo(text, data) {
-    var list = document.querySelector('.fazer');
+    var list = document.querySelector('.todo');
   
     var item = document.createElement('li');
     item.innerText = `Tarefa:  ${text} - Data:  ${data}`;
@@ -45,12 +51,11 @@ function addItemTodo(text, data) {
     complete.classList.add('complete');
     complete.innerHTML = completeSVG;
 
-
   
     buttons.appendChild(remove);
     buttons.appendChild(complete);
     item.appendChild(buttons);
 
-    list.appendChild(item)
+    list.insertBefore(item, list.childNodes[0]);
 
 }
