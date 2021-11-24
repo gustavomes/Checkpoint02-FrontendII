@@ -294,6 +294,7 @@ ul.todo li .buttons button.complete svg .fill {
 
 ul.todo#completed {
   
+  
 }
 
 ul.todo#completed:before {
@@ -306,14 +307,7 @@ ul.todo#completed:before {
   margin: 0 0 0 0rem;
 }
 
-ul.todo#todo:empty:after {
-  content: 'You have nothing to-do!';
-  margin: 0 0 0 0;
-}
 
-ul.todo#completed:empty:after {
-  content: 'You have yet to complete any tasks.';
-}
 
 ul.todo#todo:after,
 ul.todo#completed:after {
@@ -330,14 +324,14 @@ ul.todo#completed li:not(:empty){
   
 }
 
-#fixo1 {
-  
-  padding: 0;
+#fixo1 label {
+  color: var(--secondary);
+  margin: 1rem;
 }
 
-#fixo2 {
-  
-  padding: 0;
+#fixo2 label {
+  color: var(--secondary);
+  margin: 1rem;
 }
 
 

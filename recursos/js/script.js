@@ -28,7 +28,9 @@ document.getElementById("adicionarTarefa").addEventListener("click", function() 
         // resetar o input com = " ";
         document.getElementById("tarefas").value = "";
         document.getElementById("dataFinal").value = "";
-    }  
+    }  else {
+        alert("Por favor, digite uma tarefa");
+    }
 });
 
 
