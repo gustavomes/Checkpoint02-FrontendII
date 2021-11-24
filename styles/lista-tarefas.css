@@ -12,9 +12,9 @@ a {
     display: block;
     width: fit-content;
     padding: .7em 1em;
-    border-bottom: .2em solid white;
+    border-bottom: 0.25em solid white;
     text-decoration: none;
-    color: white
+    color: black !important;
 }
 
 .user-info {
@@ -28,13 +28,18 @@ a {
     text-transform: capitalize;
 }
 
-.user-info .user-image {
+.user-info {
     height: 2em;
     width: 2em;
-    border-radius: 50%;
-    background-color: white;
-    opacity: .3;
-    margin-left: .7em;
+    left: 2rem;
+}
+
+.user-image img {
+    height: 2rem;
+    width: 2rem;
+    position: fixed;
+    right: 5.2rem;
+    top: 0.5rem;
 }
 
 
