@@ -32,6 +32,31 @@ document.getElementById("adicionarTarefa").addEventListener("click", function() 
 });
 
 
+//função apgar tarefa
+function apagarTarefa() {
+    var item = this.parentNode.parentNode;
+    var parent = item.parentNode;
+    parent.removeChild(item);
+
+}
+
+//função completar tarefa
+
+function completarTarefa() {
+    var item = this.parentNode.parentNode;
+    var parent = item.parentNode;
+   var id = parent.id;
+
+   var target = (id === 'todo') ? document.getElementById('completed'):document.getElementById('todo');
+    parent.removeChild(item);
+    target.insertBefore(item, target.childNodes[0]);
+
+    console.log(item);
+
+}
+
+
+
 // criar o item da lista
 function addItemTodo(text, data) {
     var list = document.querySelector('.todo');
@@ -51,7 +76,13 @@ function addItemTodo(text, data) {
     complete.classList.add('complete');
     complete.innerHTML = completeSVG;
 
-  
+  //evento click para remover tarefa
+
+    remove.addEventListener('click', apagarTarefa);
+ 
+    //evento click para completar tarefa
+    complete.addEventListener('click', completarTarefa); 
+
     buttons.appendChild(remove);
     buttons.appendChild(complete);
     item.appendChild(buttons);
@@ -59,3 +90,7 @@ function addItemTodo(text, data) {
     list.insertBefore(item, list.childNodes[0]);
 
 }
+
+   
+
+   
