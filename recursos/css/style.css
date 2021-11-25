@@ -99,7 +99,7 @@ header {
 
 
 #tarefa input {
-    width: 50%;
+    width: 100vw;
     height: 2.8rem;
     float: left;
     color: #fff;
@@ -117,6 +117,8 @@ header {
     -webkit-appearance: none;
     -moz-appearance: none;
   }
+
+  
 /* tornar o placeholder branco */
   #tarefa input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.75);
@@ -344,12 +346,6 @@ ul.todo#completed li:not(:empty){
       display: flex;
       flex-direction: column;
     }
-    #tarefa input {
-      width: 100rem;
-      margin: 0 auto;
-      padding: 0.5rem;
-    }
-  
   
     ul.todo {
       width: 100%;
