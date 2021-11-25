@@ -334,8 +334,42 @@ ul.todo#completed li:not(:empty){
   margin: 1rem;
 }
 
+  @media screen and (max-width: 600px) {
+    #tarefa {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    #tarefa input {
+      width: 100rem;
+      margin: 0 auto;
+      padding: 0.5rem;
+    }
+  
+  
+    ul.todo {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    ul.todo li {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      text-align: left;
+      font-size: 0.8rem;
+      wrap: break-word;
+    }
+    ul.complete li {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      text-align: left;
+      font-size: 0.8rem;
+      wrap: break-word;
+    }
 
-    
-
-
-
+  
+  
