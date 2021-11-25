@@ -10,9 +10,19 @@ let dia = data2.getDate();
 let mes = data2.getMonth() + 1;
 let ano = data2.getFullYear();
 let dataCorrente = dia + "/" + mes + "/" + ano;
-
 console.log(dataCorrente);
 dataIni.innerText = `Data: ${dataCorrente}`;
+if(dia<10){
+    dia='0'+dia
+  } 
+  if(mes<10){
+    mes='0'+mes
+  } 
+today = ano+'-'+mes+'-'+dia;
+document.getElementById("dataFinal").setAttribute("min", today);
+
+
+
 
 //clicando no botão de adicionar tarefa
 //havendo texto no input, adiciona a tarefa
