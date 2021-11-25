@@ -24,7 +24,6 @@ body {
 
   width: 100vw;
   background-color: var(--light-gray);
-  min-height: 100vh;
   font-family: roboto, serif;
 }
 

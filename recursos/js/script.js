@@ -21,9 +21,6 @@ if(dia<10){
 today = ano+'-'+mes+'-'+dia;
 document.getElementById("dataFinal").setAttribute("min", today);
 
-
-
-
 //clicando no botão de adicionar tarefa
 //havendo texto no input, adiciona a tarefa
 document.getElementById("adicionarTarefa").addEventListener("click", function() {
@@ -53,7 +50,6 @@ function apagarTarefa() {
 }
 
 //função completar tarefa
-
 function completarTarefa() {
     var item = this.parentNode.parentNode;
     var parent = item.parentNode;
