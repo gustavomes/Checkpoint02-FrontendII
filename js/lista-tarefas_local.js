@@ -3,6 +3,28 @@ const btnAddTarefa = document.getElementById('adicionar-tarefa');
 const inputText = document.getElementById('nova-tarefa');
 const tarefasPendentes = document.querySelector('.tarefas-pendentes');
 const tarefasConcluidas = document.querySelector('.tarefas-concluidas');
+const data = document.getElementById('dataFinal');
+const darkmode = document.querySelector('#darkbtn')
+
+
+//calendário e data limite
+let dataIni = document.getElementById('dataInicial');
+let data2 = new Date();
+let dia = data2.getDate();
+let mes = data2.getMonth() + 1;
+let ano = data2.getFullYear();
+let dataCorrente = dia + "/" + mes + "/" + ano;
+console.log(dataCorrente);
+dataIni.innerText = `Data: ${dataCorrente}`;
+if(dia<10){
+    dia='0'+dia
+  } 
+  if(mes<10){
+    mes='0'+mes
+  } 
+today = ano+'-'+mes+'-'+dia;
+document.getElementById("dataFinal").setAttribute("min", today);
+
 
 
 //Define o indice da tarefa
@@ -11,42 +33,30 @@ let contador = 1;
 //Criando o card que será exibido - Recebe o elemento pai (tarefasPendentes)
 let criaCard = (elementoPai) => {
 
-    //Adiciona o tarefa no elemento pai 'tarefasPendentes' 
-    //Adicionar o contador
+    if (inputText.value == '') {
+        alert('Digite uma tarefa');
+
+    } else if (dataFinal.value == '') {
+            alert('Digite uma data');
+    } else {
     elementoPai.innerHTML += `<li class="tarefa">
                                        
                                         <div class="not-done"></div>
                                         <div class="descripcion">
-                                            <p class="nome">${contador} - ${inputText.value}</p>
+                                            <p class="nome"> ${contador} - Tarefa: ${inputText.value} - Início: ${dataCorrente} - Término: ${data.value}</p>
                                             <img class="excluir" src="assets/trash_icon.png" alt="Remover tarefa">
                                          </div>
 
                                 </li>`;
+
+   
     contador++;
+
+}
 }
 
 //adiciona a função de criar o card ao botão '+'
 btnAddTarefa.addEventListener('click', function (evt) {
-
-    fetch('https://jsonplaceholder.typicode.com/todos/')
-    .then(response => response.json())
-    .then(json => {
-      console.log(json);
-      for(let i = 0; i < 10; i++){
-        let todo = json[i];
-        let li = document.createElement('li');
-        li.innerHTML += `<li class="tarefa">
-                                       
-        <div class="not-done"></div>
-        <div class="descripcion">
-            <p class="nome">${todo.title}</p>
-            <img class="excluir" src="assets/trash_icon.png" alt="Remover tarefa">
-         </div>
-
-</li>`;
-        document.querySelector('.tarefas-pendentes').appendChild(li);
-      }
-    });
 
     //impede de atualizar a página
     evt.preventDefault();
@@ -81,7 +91,7 @@ tarefasPendentes.addEventListener('click', function (event) {
     if (event.target.classList.contains('excluir')) {
 
         //Verificação de segurança
-        let apagaTarefa = confirm("Você realmente deseja apagar esta tarefa ?");
+        let apagaTarefa = confirm("Deseja apagar esta tarefa ?");
         if (apagaTarefa) {
 
             //Definimos o carte <item> que será removido
@@ -92,3 +102,24 @@ tarefasPendentes.addEventListener('click', function (event) {
         }
     }
 });
+
+// dark mode
+
+function darkMode() {
+    var body = document.querySelector("body");
+    var header = document.querySelector("header");
+    var tarefa = document.querySelector(".nova-tarefa");
+    var tituloCon = document.querySelector(".titulo-concluida");
+
+    body.classList.toggle("body-dark-mode");
+    header.classList.toggle("header-dark-mode");
+    tarefa.classList.toggle("nova-tarefa-dark-mode");
+    tituloCon.classList.toggle("titulo-concluida-dark-mode");
+  }
+
+    darkmode.addEventListener('click', function (event) {
+        darkMode();
+    });
+
+
+
