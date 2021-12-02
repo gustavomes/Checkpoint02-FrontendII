@@ -4,6 +4,7 @@ const inputText = document.getElementById('nova-tarefa');
 const tarefasPendentes = document.querySelector('.tarefas-pendentes');
 const tarefasConcluidas = document.querySelector('.tarefas-concluidas');
 const data = document.getElementById('dataFinal');
+const darkmode = document.querySelector('#darkbtn')
 
 let dataIni = document.getElementById('dataInicial');
 let data2 = new Date();
@@ -97,3 +98,19 @@ tarefasPendentes.addEventListener('click', function (event) {
         }
     }
 });
+
+function darkMode() {
+    var body = document.querySelector("body");
+    var header = document.querySelector("header");
+    var tarefa = document.querySelector("tarefa");
+
+    body.classList.toggle("body-dark-mode");
+    header.classList.toggle("header-dark-mode");
+  }
+
+    darkmode.addEventListener('click', function (event) {
+        darkMode();
+    });
+
+
+

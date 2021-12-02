@@ -10,6 +10,8 @@
   --app-grey: #F2F2F2;
   --white: #F2F2F2;
   --light-gray: lightgrey;
+  --dark: rgba(34, 35, 40);
+  --darkGreen: rgb(25, 58, 23);
 }
 
 * {
@@ -25,16 +27,29 @@
     font-family: roboto, serif;
   }
 
+  .body-dark-mode {
+    background-color: var(--dark);
+    color: white;
+  }
+
 
 header {
    width: 100vw;
     display: flex;
+    
     height: 4.9rem;
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     box-shadow: 0 0.2rem 0.3rem var(--light-gray);
     margin-bottom: 2em;
     margin-top: 0;
 }
+
+.header-dark-mode {
+    background: linear-gradient(90deg, var(--dark), var(--darkGreen));
+    box-shadow: 0 0.2rem 0.3rem var(--black)
+}
+
+
 
 #logo {
     display: block;
@@ -56,11 +71,38 @@ a {
     color: white
 }
 
+.darkbutton {
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        margin-left: auto;
+        color: rgb(223, 223, 223);
+        position: absolute;
+        margin-top: 1.5rem;
+        margin-left: 10rem;
+        
+
+
+}
+
+#darkbtn {
+    
+    background-color: var(--white);
+    padding: 0.7rem 3rem 0.7rem;
+    opacity: 50%;
+    color: var(--secondary);
+    
+}
+
+
 .user-info {
     display: flex;
     align-items: center;
     margin-left: auto;
     color: rgb(223, 223, 223);
+    padding: 2rem;
 }
 
 .user-info p {
