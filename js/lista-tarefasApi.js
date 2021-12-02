@@ -3,6 +3,7 @@ const btnAddTarefa = document.getElementById('adicionar-tarefa');
 const inputText = document.getElementById('nova-tarefa');
 const tarefasPendentes = document.querySelector('.tarefas-pendentes');
 const tarefasConcluidas = document.querySelector('.tarefas-concluidas');
+const darkmode = document.querySelector('#darkbtn')
 
 
 //Criando o card que será exibido - Recebe o elemento pai (tarefasPendentes)
@@ -92,3 +93,28 @@ tarefasPendentes.addEventListener('click', function (event) {
         }
     }
 });
+
+// dark mode
+
+function darkMode() {
+    var body = document.querySelector("body");
+    var header = document.querySelector("header");
+    var tarefa = document.querySelector(".nova-tarefa");
+    var tituloCon = document.querySelector(".titulo-concluida");
+    var duasTarefas = document.querySelector(".duasTarefas");
+    var logo = document.querySelector("#logo");
+    var darkbtn = document.querySelector("#darkbtn");
+
+    body.classList.toggle("body-dark-mode");
+    header.classList.toggle("header-dark-mode");
+    tarefa.classList.toggle("nova-tarefa-dark-mode");
+    tituloCon.classList.toggle("titulo-concluida-dark-mode");
+    duasTarefas.classList.toggle("duasTarefas-dark-mode");
+    logo.classList.toggle("logo-dark-mode");
+    darkbtn.classList.toggle("darkbtn-dark-mode");
+
+  }
+
+    darkmode.addEventListener('click', function (event) {
+        darkMode();
+    });
