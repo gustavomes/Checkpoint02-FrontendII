@@ -5,8 +5,8 @@
 
 /* variáveis de estilo */
 :root {
-  --primary: #7898FF;
-  --secondary: #8E64C5;
+  --primary: #78c2ff;
+  --secondary: #7d56af;
   --app-grey: #F2F2F2;
   --white: #F2F2F2;
   --light-gray: lightgrey;
@@ -28,8 +28,7 @@
   }
 
   .body-dark-mode {
-    background-color: var(--dark);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.938);
   }
 
 
@@ -44,9 +43,9 @@ header {
     margin-top: 0;
 }
 
+
 .header-dark-mode {
-    background: linear-gradient(90deg, var(--dark), var(--darkGreen));
-    box-shadow: 0 0.2rem 0.3rem var(--black)
+    box-shadow: 0 0.2rem 0.3rem var(--black);
 }
 
 
@@ -55,20 +54,23 @@ header {
     display: block;
     width: fit-content;
     margin-top: 0.7rem;
-    padding: .7em 1em;
-    border-bottom: .2em solid var(--white);
+    padding: .65em 1em;
+    border-bottom: 3em solid var(--white);
     text-decoration: none;
-    color: var(--white);
-    font-size: 1.5rem
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo-dark-mode {
+    color: black !important;
+    border-bottom: .3em solid black !important ;
 }
 
 a {
     display: block;
     width: fit-content;
     padding: .7em 1em;
-    border-bottom: .2em solid white;
     text-decoration: none;
-    color: white
 }
 
 .darkbutton {
@@ -88,12 +90,14 @@ a {
 }
 
 #darkbtn {
-    
     background-color: var(--white);
     padding: 0.7rem 3rem 0.7rem;
-    opacity: 50%;
+    opacity: 90%;
     color: var(--secondary);
-    
+}
+
+.darkbtn-dark-mode {
+    opacity: 50% !important;
 }
 
 
@@ -135,10 +139,10 @@ a {
     z-index: 20;
 }
 
-.nova-tarefa-dark-mode {
+/* .nova-tarefa-dark-mode {
     background: linear-gradient(90deg, var(--dark), var(--darkGreen));
     box-shadow: 0 0.2rem 0.3rem var(--black)
-}
+} */
 
 .nova-tarefa input {
     color: #fff;
@@ -293,15 +297,22 @@ label {
     border-radius: .2rem;
     box-shadow: 3px 3px 5px var(--shadow-color);
     color: var(--white);
-    opacity: 50%;
     font-weight: 400;
     font-size: 1.1rem;
     margin-left: calc(15% - 4rem);
     z-index: 20;
 }
 
-.titulo-concluida-dark-mode{
-    background-color: var(--darkGreen);
+/* .titulo-concluida-dark-mode {
+    background: linear-gradient(90deg, var(--dark), var(--darkGreen)) ;
+} */
+
+.duasTarefas {
+    background: linear-gradient(90deg, rgb(3, 209, 236), rgb(122, 55, 167));
+}
+
+.duasTarefas-dark-mode {
+    background: linear-gradient(90deg, rgb(1, 56, 63), rgb(51, 15, 75));
 }
 
 

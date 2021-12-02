@@ -32,8 +32,8 @@ btnAddTarefa.addEventListener('click', function (evt) {
       for(let i = 0; i < 10; i++){
         let todo = json[i];
         let li = document.createElement('li');
-        li.innerHTML += `<li class="tarefa">
-                                       
+        document.querySelector('.tarefas-pendentes').appendChild(li);
+        li.innerHTML += `<li class="tarefa">  
         <div class="not-done"></div>
         <div class="descripcion">
             <p class="nome"> Id: ${todo.id} - Tarefa: ${todo.title} </p>
@@ -41,8 +41,11 @@ btnAddTarefa.addEventListener('click', function (evt) {
          </div>
 
 </li>`;
-        document.querySelector('.tarefas-pendentes').appendChild(li);
-      }
+
+(todo.completed) ? document.querySelector('.tarefas-concluidas').appendChild(li) : document.querySelector('.tarefas-pendentes').appendChild(li);
+    
+    }
+
     });
 
     //impede de atualizar a página
