@@ -38,7 +38,7 @@ header {
     
     height: 4.9rem;
     background: linear-gradient(90deg, var(--primary), var(--secondary));
-    box-shadow: 0 0.2rem 0.3rem var(--light-gray);
+    box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637);
     margin-bottom: 2em;
     margin-top: 0;
 }
@@ -55,7 +55,7 @@ header {
     width: fit-content;
     margin-top: 0.7rem;
     padding: .65em 1em;
-    border-bottom: 3em solid var(--white);
+    border-bottom: 0.3em solid var(--white);
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
@@ -94,10 +94,14 @@ a {
     padding: 0.7rem 3rem 0.7rem;
     opacity: 90%;
     color: var(--secondary);
+    box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637);
+    font-size: 1.05rem;
 }
 
 .darkbtn-dark-mode {
     opacity: 50% !important;
+    color: black !important;
+    box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637);
 }
 
 
@@ -126,7 +130,7 @@ a {
 /* Novas tarefa ----------------------------------------------------------- */
 
 .nova-tarefa {
-    color: #fff;
+    color: white;
     position: relative;
     display: flex;
     align-items: center;
@@ -134,7 +138,7 @@ a {
     width: 80%;
     margin: 0 10%;
     padding: 1em;
-    box-shadow: 2px 2px 10px lightgrey;
+    box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637);
     border-radius: .4em;
     z-index: 20;
 }
@@ -159,7 +163,7 @@ a {
 
 /* tornar o placeholder branco */
 .nova-tarefa  input::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255);
   }
 /* trocar a cor do ícone do caledário */
 .nova-tarefa input::-webkit-calendar-picker-indicator {
@@ -181,7 +185,7 @@ label {
 }
 
 .nova-tarefa input::placeholder {
-    color: rgb(197, 197, 197);
+    color: rgb(255, 255, 255);
     text-indent: .2em;
 }
 
@@ -191,11 +195,11 @@ label {
     background-color: transparent;
     margin-left: 2em;
     margin-right: 1em;
-    opacity: .5;
+    opacity: 70%;
 }
 
 .nova-tarefa button:hover {
-    opacity: 1;
+    opacity: 100%;
 }
 
 .nova-tarefa button img {
@@ -265,7 +269,7 @@ label {
     flex: 1;
     background-color: white;
     padding: 1em 2em;
-    box-shadow: 2px 2px 5px lightgrey;
+    box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637);
 }
 
 .tarefa .nome {
@@ -295,7 +299,7 @@ label {
     padding: .5rem 1rem;
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     border-radius: .2rem;
-    box-shadow: 3px 3px 5px var(--shadow-color);
+    box-shadow: 3px 3px 5px rgba(58, 23, 114, 0.637);
     color: var(--white);
     font-weight: 400;
     font-size: 1.1rem;
@@ -307,12 +311,12 @@ label {
     background: linear-gradient(90deg, var(--dark), var(--darkGreen)) ;
 } */
 
-.duasTarefas {
-    background: linear-gradient(90deg, rgb(3, 209, 236), rgb(122, 55, 167));
+body {
+    background: linear-gradient(90deg, rgb(3, 209, 236), rgb(122, 55, 167)) !important;
 }
 
-.duasTarefas-dark-mode {
-    background: linear-gradient(90deg, rgb(1, 56, 63), rgb(51, 15, 75));
+.body-dark-mode {
+    background: linear-gradient(90deg, rgb(1, 56, 63), rgb(51, 15, 75)) !important;
 }
 
 
@@ -359,7 +363,7 @@ label {
     align-items: center;
     margin: 5px;
     display: flex;
-    opacity: 0;
+    opacity: 30%;
     transition: opacity 400ms linear;
 }
 
