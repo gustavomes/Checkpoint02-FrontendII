@@ -25,24 +25,26 @@ let criaCard = (elementoPai) => {
 //adiciona a função de criar o card ao botão '+'
 btnAddTarefa.addEventListener('click', function (evt) {
 
-    fetch('https://jsonplaceholder.typicode.com/todos/')
-    .then(response => response.json())
-    .then(json => {
-      console.log(json);
-      for(let i = 0; i < 10; i++){
-        let todo = json[i];
-        let li = document.createElement('li');
-        li.innerHTML += `<li class="tarefa">
-                                       
-        <div class="not-done"></div>
-        <div class="descripcion">
-            <p class="nome"> Id: ${todo.id} - Tarefa: ${todo.title} </p>
-            <img class="excluir" src="assets/trash_icon.png" alt="Remover tarefa">
-         </div>
+        fetch('https://jsonplaceholder.typicode.com/todos/')
+        .then(response => response.json())
+        .then(json => {
+        console.log(json);
+        for(let i = 0; i < json.length; i++) {
+            let todo = json[i];
+            let li = document.createElement('li');
+            document.querySelector('.tarefas-pendentes').appendChild(li);
+            li.innerHTML += `<li class="tarefa">  
+            <div class="not-done"></div>
+            <div class="descripcion">
+                <p class="nome"> Id: ${todo.id} - Tarefa: ${todo.title} </p>
+                <img class="excluir" src="assets/trash_icon.png" alt="Remover tarefa">
+            </div>
 
-</li>`;
-        document.querySelector('.tarefas-pendentes').appendChild(li);
-      }
+    </li>`;
+
+    (todo.completed) ? document.querySelector('.tarefas-concluidas').appendChild(li) : document.querySelector('.tarefas-pendentes').appendChild(li);
+        
+        }
     });
 
     //impede de atualizar a página
