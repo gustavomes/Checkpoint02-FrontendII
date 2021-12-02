@@ -296,10 +296,6 @@ ul.todo li .buttons button.complete svg .fill {
   fill: var(--secondary);
 }
 
-ul.todo#completed {
-  
-  
-}
 
 ul.todo#completed:before {
   content: '';
@@ -338,6 +334,16 @@ ul.todo#completed li:not(:empty){
   margin: 1rem;
 }
 
+.excluir {
+  height: 1rem;
+}
+
+.descripcion {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
   @media screen and (max-width: 600px) {
     #tarefa {
       width: 100%;
@@ -358,7 +364,7 @@ ul.todo#completed li:not(:empty){
       padding: 0;
       text-align: left;
       font-size: 0.8rem;
-      wrap: break-word;
+      
     }
     ul.complete li {
       width: 100%;
@@ -366,5 +372,8 @@ ul.todo#completed li:not(:empty){
       padding: 0;
       text-align: left;
       font-size: 0.8rem;
-      wrap: break-word;
+      
     }
+
+
+  }
