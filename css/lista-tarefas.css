@@ -8,7 +8,7 @@
   --primary: #78c2ff;
   --secondary: #7d56af;
   --app-grey: #F2F2F2;
-  --white: #F2F2F2;
+  --white: #ffffff;
   --light-gray: lightgrey;
   --dark: rgba(34, 35, 40);
   --darkGreen: rgb(25, 58, 23);
@@ -265,7 +265,10 @@ label {
     align-items: center;
     justify-content: space-between;
     flex: 1;
-    background-color: white;
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.563);
+    border-radius: 0.5rem;
+    
     padding: 1em 2em;
     box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637);
 }
@@ -310,7 +313,10 @@ label {
 } */
 
 body {
-    background: linear-gradient(90deg, rgb(3, 209, 236), rgb(122, 55, 167)) !important;
+        background-image: url(../assets/fundo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
 }
 
 .body-dark-mode {
@@ -346,7 +352,7 @@ body {
 }
 
 .tarefas-concluidas .tarefa .descripcion .nome {
-    color: grey;
+    color: rgb(123, 123, 123);
     text-decoration: line-through;
 }
 

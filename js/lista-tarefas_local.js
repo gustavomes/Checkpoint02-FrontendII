@@ -32,7 +32,7 @@ let contador = 1;
 
 //Criando o card que será exibido - Recebe o elemento pai (tarefasPendentes)
 let criaCard = (elementoPai) => {
-
+ 
     if (inputText.value == '') {
         alert('Digite uma tarefa');
 
