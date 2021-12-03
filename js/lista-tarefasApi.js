@@ -102,7 +102,7 @@ function darkMode() {
     var tarefa = document.querySelector(".nova-tarefa");
     var tituloCon = document.querySelector(".titulo-concluida");
     var duasTarefas = document.querySelector(".duasTarefas");
-    var logo = document.querySelector("#logo");
+    var logo = document.getElementById("logo");
     var darkbtn = document.querySelector("#darkbtn");
 
     body.classList.toggle("body-dark-mode");
