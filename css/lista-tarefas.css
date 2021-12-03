@@ -72,6 +72,12 @@ a {
     padding: .7em 1em;
     text-decoration: none;
 }
+.a {
+    display: block;
+    width: fit-content;
+    padding: .7em 1em;
+    text-decoration: none;
+}
 
 .darkbutton {
     
@@ -88,12 +94,8 @@ a {
 
 
 #darkbtn {
-    background-color: var(--white);
-    padding: 0.7rem 3rem 0.7rem;
-    opacity: 90%;
-    color: var(--secondary);
-    box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637);
-    font-size: 1.05rem;
+  
+
 }
 
 .darkbtn-dark-mode {
@@ -266,7 +268,7 @@ label {
     justify-content: space-between;
     flex: 1;
     color: var(--white);
-    background-color: rgba(255, 255, 255, 0.563);
+    background-color: rgba(255, 255, 255, 0.912);
     border-radius: 0.5rem;
     
     padding: 1em 2em;
