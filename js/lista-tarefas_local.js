@@ -13,15 +13,15 @@ let data2 = new Date();
 let dia = data2.getDate();
 let mes = data2.getMonth() + 1;
 let ano = data2.getFullYear();
-let dataCorrente = dia + "/" + mes + "/" + ano;
-console.log(dataCorrente);
-dataIni.innerText = `Data: ${dataCorrente}`;
 if(dia<10){
     dia='0'+dia
   } 
   if(mes<10){
     mes='0'+mes
   } 
+let dataCorrente = dia + "/" + mes + "/" + ano;
+console.log(dataCorrente);
+dataIni.innerText = `Data: ${dataCorrente}`;
 today = ano+'-'+mes+'-'+dia;
 document.getElementById("dataFinal").setAttribute("min", today);
 
@@ -32,18 +32,18 @@ let contador = 1;
 
 //Criando o card que será exibido - Recebe o elemento pai (tarefasPendentes)
 let criaCard = (elementoPai) => {
- 
-    if (inputText.value == '') {
-        alert('Digite uma tarefa');
 
-    } else if (dataFinal.value == '') {
-            alert('Digite uma data');
+    if (inputText.value.length < 11) {
+        alert('Digite uma tarefa com no mínimo 10 caracteres');
+
+    } else if (data.value == '') {
+            alert('Insira uma data final');
     } else {
     elementoPai.innerHTML += `<li class="tarefa">
                                        
                                         <div class="not-done"></div>
                                         <div class="descripcion">
-                                            <p class="nome"> ${contador} - Tarefa: ${inputText.value} - Início: ${dataCorrente} - Término: ${data.value}</p>
+                                            <p class="nome"> ${contador} - Tarefa: ${inputText.value} - Início: ${dataCorrente} - Término: ${new Date(data.value).toLocaleDateString("pt-BR", {timeZone: 'UTC'})}</p>
                                             <img class="excluir" src="assets/trash_icon.png" alt="Remover tarefa">
                                          </div>
 
