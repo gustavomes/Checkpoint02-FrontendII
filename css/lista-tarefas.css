@@ -159,9 +159,6 @@ a {
         justify-content: center;    
         margin-left: auto;
         background: var(--petroleo) !important;
-        position: absolute;
-        margin-top: 0.8rem;
-        margin-left: 17rem;
 }
 
 .nav-link_ative {
@@ -218,11 +215,10 @@ a {
     display: flex;
     align-items: center;
     /* background: linear-gradient(90deg, var(--primary), var(--secondary)); */
-    background: var(--verdeBebe);
+    background: #165c75;
     opacity: 80%;
     margin: 0 10%;
     padding: 1em;
-  /*   box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637); */
     border-radius: .4em;
     z-index: 20;
 }
@@ -235,7 +231,7 @@ a {
     padding: .3em;
     font-size: 1.1em;
     background: rgba(255, 255, 255, 0.248);
-    
+
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -255,7 +251,7 @@ a {
 
 
 label {
-    padding: 1rem
+    padding: 1rem;
 }
 
 .nova-tarefa input:focus {
@@ -265,7 +261,7 @@ label {
 
 .nova-tarefa input::placeholder {
     color: var(--white);
-    text-indent: .2em;
+    text-indent: 1.2em;
 }
 
 .nova-tarefa button {
@@ -399,7 +395,7 @@ label {
     padding: .5rem 1rem;
     opacity: 50%;
     /* background: linear-gradient(90deg, var(--primary), var(--secondary)); */
-    background: var(--verdeBebe);
+    background: #17607a;
     border-radius: .2rem;
    /*  box-shadow: 0.3rem 0.3rem 0.5rem rgba(58, 23, 114, 0.637); */
     color: var(--white);
