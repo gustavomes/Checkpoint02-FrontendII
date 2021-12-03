@@ -21,13 +21,14 @@
 --azulPscina: #ffffff; /* letras */
 --verdeBebe: #141736ef; /* footer */
 
-/* Paleta darkmode */
+/* Paleta darkmode- que eh bright */
 
---background: #041810;
---header: #1c7596;
+--background: #186444;
+--header: #2ebaec;
 --letras1: #ffffff;
 --letras2: #ffffff;
---footer: #141736ef;
+--footer: #2e6b9cef;
+--atividade: #2d37a5ef;
 
 /* Paleta 1 */
 
@@ -95,10 +96,24 @@
     height: 100vh;
     font-family: roboto, serif;
   }
+/* dark-mode */
 
-  .body-dark-mode {
+.body-dark-mode {
     background: linear-gradient(90deg, var(--background), var(--footer)) !important;
-  }
+}
+
+.header-dark-mode {
+    background-color: var(--header) !important;
+}
+
+.container-fixed-bottom-dark-mode {
+    background-color: white !important;
+}
+
+.nova-tarefa-dark-mode {
+    background: var(--atividade) !important;
+}
+
 
 
 header {
@@ -106,15 +121,8 @@ header {
     display: flex;
     opacity: 80%;
     height: 4.9rem;
-    /* background: var (--verdeBebe); */
-    /* box-shadow: 0 0.3rem 0.4rem rgba(58, 23, 114, 0.611); */
     margin-bottom: 2em;
     margin-top: 0;
-}
-
-
-.header-dark-mode {
-    box-shadow: 0 0.2rem 0.3rem var(--black);
 }
 
 #logo {
@@ -126,11 +134,6 @@ header {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
-}
-
-.logo-dark-mode {
-    color: black !important;
-    border-bottom: .3em solid black !important ;
 }
 
 a {
@@ -159,12 +162,6 @@ a {
         position: absolute;
         margin-top: 0.8rem;
         margin-left: 17rem;
-}
-
-.darkbtn-dark-mode {
-    opacity: 50% !important;
-    color: black !important;
-    box-shadow: 0 0.2rem 0.3rem rgba(58, 23, 114, 0.637);
 }
 
 .nav-link_ative {
@@ -212,7 +209,6 @@ a {
     top: 1.5rem;
 }
 
-
 /* Novas tarefa ----------------------------------------------------------- */
 
 .nova-tarefa {
@@ -221,7 +217,7 @@ a {
     position: relative;
     display: flex;
     align-items: center;
-   /*  background: linear-gradient(90deg, var(--primary), var(--secondary)); */
+    /* background: linear-gradient(90deg, var(--primary), var(--secondary)); */
     background: var(--verdeBebe);
     opacity: 80%;
     margin: 0 10%;
@@ -230,11 +226,6 @@ a {
     border-radius: .4em;
     z-index: 20;
 }
-
-/* .nova-tarefa-dark-mode {
-    background: linear-gradient(90deg, var(--dark), var(--darkGreen));
-    box-shadow: 0 0.2rem 0.3rem var(--black)
-} */
 
 .nova-tarefa input {
     color: #fff;
@@ -417,13 +408,6 @@ label {
     margin-left: calc(15% - 4rem);
     z-index: 20;
 }
-
-/* .titulo-concluida-dark-mode {
-    background: linear-gradient(90deg, var(--dark), var(--darkGreen)) ;
-} */
-
-
-
 
 /* Ver o estilo, onde acaba o que está no github */
 

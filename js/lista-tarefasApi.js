@@ -99,19 +99,13 @@ tarefasPendentes.addEventListener('click', function (event) {
 function darkMode() {
     var body = document.querySelector("body");
     var header = document.querySelector("header");
+    var containerbottom = document.querySelector(".container-fixed-bottom");
     var tarefa = document.querySelector(".nova-tarefa");
-    var tituloCon = document.querySelector(".titulo-concluida");
-    var duasTarefas = document.querySelector(".duasTarefas");
-    var logo = document.getElementById("logo");
-    var darkbtn = document.querySelector("#darkbtn");
 
     body.classList.toggle("body-dark-mode");
     header.classList.toggle("header-dark-mode");
+    containerbottom.classList.toggle("container-fixed-bottom-dark-mode");
     tarefa.classList.toggle("nova-tarefa-dark-mode");
-    tituloCon.classList.toggle("titulo-concluida-dark-mode");
-    duasTarefas.classList.toggle("duasTarefas-dark-mode");
-    logo.classList.toggle("logo-dark-mode");
-    darkbtn.classList.toggle("darkbtn-dark-mode");
 
   }
 
