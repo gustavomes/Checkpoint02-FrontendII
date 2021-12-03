@@ -285,6 +285,10 @@ label {
     cursor: pointer;
 }
 
+.container-fixed-bottom {
+    background-color: rgb(47, 47, 63) !important;
+}
+
 
 /* Lista de tarefas ----------------------------------------------------------- */
 
