@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+/* variáveis de estilo */
+:root {
+  --primary: #7898FF;
+  --secondary: #8E64C5;
+  --app-grey: #F2F2F2;
+  --white: #F2F2F2;
+  --light-gray: lightgrey;
+}
+
+/* inicial */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+
+  width: 100vw;
+  background-color: var(--light-gray);
+  font-family: roboto, serif;
+}
+
+li {
+    padding: 1rem;
+}
+/* header degrade */
+header {
+    width: 100vw;
+    display: flex;
+    height: 4.9rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    box-shadow: 0 0.2rem 0.3rem var(--light-gray);
+    margin-bottom: 2em;
+    margin-top: 0;
+}
+
+/* Nossa Todo List */
+
+#logo {
+    display: block;
+    width: fit-content;
+    margin-top: 0.7rem;
+    padding: .7em 1em;
+    border-bottom: .2em solid var(--white);
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem
+}
+
+/* Informaçoes do Usuário */
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: rgb(223, 223, 223);
+    padding-right: 2rem;
+}
+
+/* Texto do Usuário */
+
+.user-info p {
+    text-transform: capitalize;
+}
+
+/* Imagem do Usuário */
+.user-info .user-image {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: white;
+    opacity: .3;
+    margin-left: .7em;
+}
+
+/* div da entrada da tarefa */
+
+#tarefa {
+    color: #fff;
+    width: 100%;
+    height: 8.5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    left: 0;
+    z-index: 5;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    margin-bottom: 1.5rem;
+    
+}
+
+/* input da tarefa */
+
+
+#tarefa input {
+    width: 90vw;
+    height: 2.8rem;
+    float: left;
+    color: #fff;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-indent: 1rem;
+    background: rgba(255, 255, 255, 0.248);
+    border: 0px;
+    border-radius: 0.3rem;
+    box-shadow: none;
+    outline: none;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  
+/* tornar o placeholder branco */
+  #tarefa input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+  }
+/* trocar a cor do ícone do caledário */
+  #tarefa input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}  
+  
+/* Botão da Terefa */
+
+#tarefa button {
+    width: 3.5rem;
+    height: 3.5rem;
+    position:absolute;
+    top:13.5rem;
+    right: 1.5rem;
+    z-index:2;
+    border-radius: 4rem;
+    background: #fff;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    border: 4px solid #8E64C5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+  }
+
+  /* botão sgv */
+
+  #tarefa button svg {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.5rem 0 0 -0.5rem;
+    cursor: pointer;
+  
+  }
+  
+  #tarefa button svg .fill {
+    fill: #b571dd95;
+  }
+
+  /* ul - lista todo */
+
+ul.todo {
+  width: 95%;
+  float: left;
+  list-style: none;
+    
+}
+.container {
+  padding: 1rem 1rem 0 1rem;
+  text-align: center;
+    
+}
+ul.todo li {
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    line-height: 1.5rem;
+    background: var(--white);
+    border-radius: 0.3rem;
+    position: relative;
+    box-shadow: 0px 0.1rem 0.2rem rgba(44, 62, 80, 0.10);
+    word-break: break-word;
+    margin-top: 0.5rem; /* distância entre os li */
+
+}
+/* botões das tarefas */
+
+  
+
+  .noFill {
+    fill: none;
+  }
+
+  
+
+#dataInicial {
+    padding: 0rem 3rem 0 0;
+}
+
+#dataFinal {
+    padding: 0rem 3rem 0 0;
+}
+
+ul.todo li .buttons {
+  width: 6.25rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+ul.todo li .buttons button {
+  width: 3rem;
+    height: 3rem;
+    float: left;
+    background: none;
+    position: relative;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+ul.todo li .buttons button:last-of-type:before {
+  content: '';
+    width: 0.1rem;
+    height: 1.8rem;
+    background: #edf0f1;
+    position: absolute;
+    top: 0.6rem;
+    left: 0;
+}
+
+ul.todo li .buttons button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -0.3rem 0 0 -0.8rem;
+}
+
+ul.todo li .buttons button.complete svg {
+  
+  border: 0.1rem solid var(--secondary);
+  transition: background 0.2s ease;
+}
+
+ul.todo#completed li .buttons button.complete svg {
+  background: var(--secondary);
+  border: 0px;
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg {
+  background: var(--secondary);
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
+  fill: #fff;
+}
+
+ul.todo#completed li .buttons button.complete svg .fill {
+  fill: #fff;
+}
+
+ul.todo li .buttons button svg .fill {
+  transition: fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg .fill {
+  fill: #c0cecb;
+}
+
+ul.todo li .buttons button.remove:hover svg .fill {
+  fill: #e85656;
+}
+
+ul.todo li .buttons button.complete svg .fill {
+  fill: var(--secondary);
+}
+
+
+ul.todo#completed:before {
+  content: '';
+  width: 3.75rem;
+  background: #d8e5e0;
+  position: absolute;
+  top: 1.8rem;
+  left: 50%;
+  margin: 0 0 0 0rem;
+}
+
+
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+ul.todo#completed li:not(:empty){
+  opacity: 0.5;
+  text-decoration: line-through;
+  
+}
+
+#fixo1 label {
+  color: var(--secondary);
+  margin: 1rem;
+}
+
+#fixo2 label {
+  color: var(--secondary);
+  margin: 1rem;
+}
+
+.excluir {
+  height: 1rem;
+}
+
+.descripcion {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+  @media screen and (max-width: 600px) {
+    #tarefa {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    ul.todo {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    ul.todo li {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      text-align: left;
+      font-size: 0.8rem;
+      
+    }
+    ul.complete li {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      text-align: left;
+      font-size: 0.8rem;
+      
+    }
+
+
+  }
