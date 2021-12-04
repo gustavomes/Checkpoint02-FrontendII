@@ -522,3 +522,52 @@ li {
     
 }
 
+/* responsividade */
+
+@media (max-width: 440px) {
+    .letrinha {
+        font-size: 15px;
+        margin: 0px !important;
+        padding: 1px !important;
+        width: 94.2px;
+    }
+    .card-body{
+        font-size: 15px !important;
+    }
+    .card-title{
+        font-size: 20px !important;
+    }
+    .fw-normal{
+        font-size: 22px !important;
+    }
+
+    }
+
+@media (max-width: 378px) {
+    .letrinha {
+        font-size: 13px;
+        margin: 0px !important;
+        padding: 0px !important;
+        width: 83.1px;
+    }
+    .card-body{
+        font-size: 13px !important;
+    }
+    .card-title{
+        font-size: 17px !important;
+    }
+    .fw-normal{
+        font-size: 20px !important;
+    }
+    }
+
+    @media (max-width: 336px) {
+        .letrinha {
+            font-size: 12px;
+            margin: 0px !important;
+            padding: 0px !important;
+            width: 78.6px;
+        }
+        }
+
+
